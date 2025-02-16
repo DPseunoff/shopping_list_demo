@@ -3,7 +3,7 @@ class ShoppingItem {
   final String name;
   final bool isBought;
 
-  ShoppingItem({
+  const ShoppingItem({
     required this.id,
     required this.name,
     this.isBought = false,
