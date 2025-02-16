@@ -29,11 +29,11 @@ class ShoppingListManager extends ChangeNotifier {
     try {
       final loaded = await dao.loadItems();
       _items = loaded;
+      _state = ShoppingListState.idle;
+      notifyListeners();
     } on Exception {
       _state = ShoppingListState.error;
       notifyListeners();
-    } finally {
-      _setIdleState();
     }
   }
 
@@ -80,7 +80,7 @@ class ShoppingListManager extends ChangeNotifier {
     notifyListeners();
 
     try {
-      await dao.updateItem(newItem);
+      await dao.updateItem(id, newItem);
     } on Exception {
       _items[index] = oldItem;
       _state = ShoppingListState.itemChangeError;

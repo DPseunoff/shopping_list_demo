@@ -11,7 +11,7 @@ abstract class ShoppingListDao {
   Future<void> saveItem(ShoppingItem item);
 
   /// Обновить (изменить) элемент.
-  Future<void> updateItem(ShoppingItem item);
+  Future<void> updateItem(String id, ShoppingItem item);
 
   /// Удалить элемент по ID.
   Future<void> deleteItem(String id);
