@@ -55,7 +55,7 @@ void main() {
         'Переданная покупка должна обновиться',
         () async {
           await runtimeDataBase.updateItem(shoppingItem);
-
+          
           expect(runtimeDataBase.items.keys, contains(uniqueId));
           expect(runtimeDataBase.items[uniqueId]?.isBought, isTrue);
         },

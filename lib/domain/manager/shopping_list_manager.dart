@@ -80,7 +80,7 @@ class ShoppingListManager extends ChangeNotifier {
     notifyListeners();
 
     try {
-      await dao.updateItem(newItem);
+      await dao.updateItem(id, newItem);
     } on Exception {
       _items[index] = oldItem;
       _state = ShoppingListState.itemChangeError;
