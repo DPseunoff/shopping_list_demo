@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'dependencies_container.dart';
 
 class AppDependencies extends InheritedWidget {
-  final DependenciesContainer container;
+  final DependenciesContainerFactory container;
 
   const AppDependencies({
     Key? key,

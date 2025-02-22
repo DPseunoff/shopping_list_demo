@@ -13,10 +13,52 @@ dependencies:
   cupertino_icons: ^1.0.2
   uuid: ^4.4.2
 
+  # Mocktail dep
+  mocktail: ^1.0.4
+
+  # Freezed deps
+  freezed: ^2.5.7
+
+  # Common dep for data storage
+  path_provider: ^2.1.5
+
+  # Shared preferences dep
+  shared_preferences: ^2.5.2
+
+  # ObjectBox deps
+  objectbox: 4.1.0
+  objectbox_flutter_libs: any
+
+  # Drift deps
+  drift: ^2.23.1
+  drift_flutter: ^0.2.4
+  envied: ^1.1.1
+
 dev_dependencies:
+  flutter_lints: ^2.0.0
+
+  # Common dep
+  build_runner: ^2.4.13
+
+  # Freezed deps
+  freezed_annotation: ^2.4.4
+  json_serializable: ^6.9.0
+
+  # Common testing deps
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  integration_test:
+    sdk: flutter
+
+  # Goldens testing dep
+  golden_toolkit: 0.15.0
+
+  # ObjectBox dep
+  objectbox_generator: any
+
+  # Drift dep
+  drift_dev: ^2.23.1
+  envied_generator: ^1.1.1
 
 flutter:
   uses-material-design: true
