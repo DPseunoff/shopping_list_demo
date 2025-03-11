@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 enum AddItemButtonState { loading, idle }
 
 class AddItemButton extends StatelessWidget {
-  final VoidCallback onTap;
   final AddItemButtonState buttonState;
+  final VoidCallback? onTap;
 
   const AddItemButton({
-    required this.onTap,
     this.buttonState = AddItemButtonState.idle,
+    this.onTap,
     Key? key,
   }) : super(key: key);
 

@@ -28,12 +28,12 @@ class ShoppingListManager extends ChangeNotifier {
   Future<void> loadItems() async {
     try {
       final loaded = await dao.loadItems();
-      _items = loaded;
+      _items = List.of(loaded);
+      _state = ShoppingListState.idle;
+      notifyListeners();
     } on Exception {
       _state = ShoppingListState.error;
       notifyListeners();
-    } finally {
-      _setIdleState();
     }
   }
 

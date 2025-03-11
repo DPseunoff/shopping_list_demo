@@ -4,9 +4,10 @@ import 'package:shopping_list_demo/widget/shopping_list_page.dart';
 import 'di/app_dependencies.dart';
 import 'di/dependencies_container.dart';
 
-void main() {
-  // Создаём контейнер зависимостей
-  final container = DependenciesContainer.create();
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  final container = DependenciesContainer.runtime();
 
   runApp(
     AppDependencies(

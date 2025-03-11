@@ -15,4 +15,6 @@ abstract class ShoppingListDao {
 
   /// Удалить элемент по ID.
   Future<void> deleteItem(String id);
+
+  Future<void> dispose();
 }

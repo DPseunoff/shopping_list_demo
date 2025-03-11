@@ -22,7 +22,7 @@ class _ShoppingListPageState extends State<ShoppingListPage> {
     super.didChangeDependencies();
 
     // Берём менеджер из зависимостей
-    manager = AppDependencies.of(context).container.shoppingListManager;
+    manager = AppDependencies.of(context).shoppingListManager;
 
     // Подписываемся на уведомления
     manager.addListener(_onManagerUpdated);

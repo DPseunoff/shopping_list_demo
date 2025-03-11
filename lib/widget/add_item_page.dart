@@ -21,6 +21,7 @@ class _AddItemPageState extends State<AddItemPage> {
         child: Column(
           children: [
             TextField(
+              key: const ValueKey('text_field'),
               controller: _controller,
               autofocus: true,
               decoration: const InputDecoration(

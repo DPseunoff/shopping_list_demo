@@ -1,27 +1,16 @@
-class ShoppingItem {
-  final String id;
-  final String name;
-  final bool isBought;
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-  ShoppingItem({
-    required this.id,
-    required this.name,
-    this.isBought = false,
-  });
+part 'shopping_item.freezed.dart';
+part 'shopping_item.g.dart';
 
-  ShoppingItem copyWith({
-    String? id,
-    String? name,
-    bool? isBought,
-  }) {
-    return ShoppingItem(
-      id: id ?? this.id,
-      name: name ?? this.name,
-      isBought: isBought ?? this.isBought,
-    );
-  }
+@freezed
+abstract class ShoppingItem with _$ShoppingItem {
+  const factory ShoppingItem({
+    required String id,
+    required String name,
+    @Default(false) bool isBought,
+  }) = _ShoppingItem;
 
-  @override
-  String toString() =>
-      'ShoppingItem(id: $id, name: $name, isBought: $isBought)';
+  factory ShoppingItem.fromJson(Map<String, Object?> json) =>
+      _$ShoppingItemFromJson(json);
 }
