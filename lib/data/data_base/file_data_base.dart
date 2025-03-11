@@ -44,4 +44,7 @@ class ShoppingListFileDataBase implements ShoppingListDao {
     // TODO: implement deleteItem
     throw UnimplementedError();
   }
+
+  @override
+  Future<void> dispose() async {}
 }

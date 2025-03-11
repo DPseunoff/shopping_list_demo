@@ -71,4 +71,7 @@ class ShoppingListObjectBoxDataBase implements ShoppingListDao {
 
     box.remove(boxId);
   }
+
+  @override
+  Future<void> dispose() async => _store.close();
 }

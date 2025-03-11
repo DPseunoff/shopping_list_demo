@@ -6,10 +6,10 @@ import 'package:shopping_list_demo/di/dependencies_container.dart';
 import 'package:shopping_list_demo/main.dart';
 
 void main() {
-  late final DependenciesContainerFactory container;
+  late final DependenciesContainer container;
 
   setUpAll(() async {
-    container = DependenciesContainerFactory.defaultt();
+    container = DependenciesContainer.runtime();
 
     await loadAppFonts();
   });

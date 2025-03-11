@@ -31,7 +31,6 @@ dependencies:
   # Drift deps
   drift: ^2.23.1
   drift_flutter: ^0.2.4
-  envied: ^1.1.1
 
 dev_dependencies:
   flutter_lints: ^2.0.0

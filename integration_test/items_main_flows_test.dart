@@ -12,7 +12,7 @@ void main() {
   late final Widget myApp;
 
   setUpAll(() {
-    final container = DependenciesContainerFactory.defaultt();
+    final container = DependenciesContainer.runtime();
 
     myApp = AppDependencies(
       container: container,

@@ -53,4 +53,7 @@ class ShoppingListDriftDataBase implements ShoppingListDao {
           ..where((table) => table.id.equals(id)))
         .go();
   }
+
+  @override
+  Future<void> dispose() => _database.close();
 }

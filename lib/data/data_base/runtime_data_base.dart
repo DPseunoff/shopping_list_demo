@@ -43,4 +43,7 @@ class ShoppingListRuntimeDataBase implements ShoppingListDao {
 
     items.remove(id);
   }
+
+  @override
+  Future<void> dispose() async {}
 }
