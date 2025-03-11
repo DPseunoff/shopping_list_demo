@@ -1,5 +1,5 @@
 name: shopping_list_demo
-description: Demo project of testing and persistance in Flutter
+description: Demo project of testing and persistence in Flutter
 publish_to: 'none'
 
 version: 1.0.0+1
@@ -11,9 +11,6 @@ dependencies:
   flutter:
     sdk: flutter
   uuid: ^4.4.2
-
-  # Mocktail dep
-  mocktail: ^1.0.4
 
   # Freezed deps
   freezed: ^2.5.7
@@ -42,21 +39,11 @@ dev_dependencies:
   freezed_annotation: ^2.4.4
   json_serializable: ^6.9.0
 
-  # Common testing deps
-  flutter_test:
-    sdk: flutter
-  integration_test:
-    sdk: flutter
-
-  # Goldens testing dep
-  golden_toolkit: 0.15.0
-
   # ObjectBox dep
   objectbox_generator: any
 
   # Drift dep
   drift_dev: ^2.23.1
-  envied_generator: ^1.1.1
 
 flutter:
   uses-material-design: true

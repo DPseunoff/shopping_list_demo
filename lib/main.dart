@@ -7,7 +7,7 @@ import 'di/dependencies_container.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  final container = DependenciesContainer.runtime();
+  final container = DependenciesContainer.withFile();
 
   runApp(
     AppDependencies(
