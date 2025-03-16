@@ -35,7 +35,7 @@ void main() {
           // act
           await shoppingListManager.loadItems();
 
-          // aspect
+          // assert
           expect(shoppingListManager.items, isEmpty);
         },
       );
@@ -49,7 +49,7 @@ void main() {
           // act
           await shoppingListManager.loadItems();
 
-          // aspect
+          // assert
           expect(shoppingListManager.state, equals(ShoppingListState.error));
         },
       );
@@ -81,7 +81,7 @@ void main() {
           // act
           await shoppingListManager.addItem(name);
 
-          // aspect
+          // assert
           expect(
             shoppingListManager.items.map((item) => item.name).toList(),
             contains(name),
@@ -104,7 +104,7 @@ void main() {
           // act
           await shoppingListManager.addItem(name2);
 
-          // aspect
+          // assert
           expect(
             shoppingListManager.items.map((item) => item.name).toList(),
             isNot(contains(name2)),
@@ -126,7 +126,7 @@ void main() {
           shoppingListManager.addItem(name3);
           shoppingListManager.addItem(name3);
 
-          // aspect
+          // assert
           verify(() => shoppingListDao.saveItem(any())).called(1);
         },
       );
@@ -140,7 +140,7 @@ void main() {
           // act
           shoppingListManager.addItem('');
 
-          // aspect
+          // assert
           verifyNever(() => shoppingListDao.saveItem(any()));
         },
       );

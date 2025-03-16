@@ -23,7 +23,7 @@ void main() {
           // act
           final buttonFinder = find.byType(AddItemButton);
 
-          // aspect
+          // assert
           await expectLater(
             buttonFinder,
             matchesGoldenFile('goldens/add_item_button_idle.png'),
@@ -47,7 +47,7 @@ void main() {
           // act
           final buttonFinder = find.byType(AddItemButton);
 
-          // aspect
+          // assert
           await expectLater(
             buttonFinder,
             matchesGoldenFile('goldens/add_item_button_loading.png'),
